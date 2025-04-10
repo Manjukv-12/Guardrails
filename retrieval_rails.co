@@ -1,0 +1,14 @@
+# guardrails/rails/retrieval_rails.co
+define flow validate_retrieval
+  user ask question
+  execute validate_context
+  bot respond
+
+define user ask question
+  "Can you tell me about $topic?"
+  "What does the document say about $topic?"
+  "Explain $topic from the PDF"
+  "Find information on $topic"
+
+define bot respond
+  "Based on the retrieved context: $response"

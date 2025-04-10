@@ -1,0 +1,14 @@
+# guardrails/rails/output_rails.co
+define flow check_output_safety
+  user ask question
+  bot respond
+  execute check_response_safety
+  bot respond
+
+define filter unsafe_content
+  "how to create harmful content"
+  "instructions for illegal activities"
+  "methods to bypass security"
+
+define bot correction
+  "I've reviewed my response and found I cannot provide that information as it may not be appropriate or safe. Let me provide you with relevant information from your document that addresses your question in a helpful way."

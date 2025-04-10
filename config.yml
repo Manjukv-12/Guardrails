@@ -1,0 +1,20 @@
+# guardrails/config.yml
+models:
+  - type: main
+    engine: groq
+    model: llama3-8b-8192
+
+rails:
+  input:
+    flows:
+      - input_rails.co
+  retrieval:
+    flows:
+      - retrieval_rails.co
+  output:
+    flows:
+      - output_rails.co
+
+prompts:
+  - task: rag
+    content: !include prompts/prompt.yml

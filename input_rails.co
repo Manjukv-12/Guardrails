@@ -1,0 +1,35 @@
+# guardrails/rails/input_rails.co
+define user ask sensitive
+  "how to make $harmful_item"
+  "how to create $harmful_item"
+  "steps to build $harmful_item"
+  "instructions for $harmful_action"
+  "$harmful_action tutorial"
+  "synthesize $illegal_substance"
+
+define harmful_item
+  "bomb"
+  "explosive"
+  "weapon"
+  "malware"
+  "virus"
+
+define harmful_action
+  "hack"
+  "steal"
+  "attack"
+  "exploit"
+  "break into"
+
+define illegal_substance
+  "illegal drugs"
+  "narcotics"
+  "meth"
+  "cocaine"
+
+define flow input_moderation
+  user ask sensitive
+  bot refuse_sensitive
+
+define bot refuse_sensitive
+  "I cannot provide information on that topic as it could potentially be harmful. I'm designed to provide helpful and safe information about the document you uploaded. Please ask something else about the content of your PDF."
